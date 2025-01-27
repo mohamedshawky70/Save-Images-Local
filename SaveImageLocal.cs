@@ -1,4 +1,5 @@
-﻿                  
+private readonly List<string> ImgMaxAllowdExtension = new() { ".jpg", ".jpeg", ".png" };
+private readonly int ImgMaxAllowdSize = 2097152; //2MB﻿                  
 public class BooksController : Controller
 {
 	public async Task<IActionResult> Create(BookFormVM model)
