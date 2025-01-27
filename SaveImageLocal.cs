@@ -29,7 +29,7 @@ public class BooksController : Controller
 			var ImageName = $"{Guid.NewGuid()}{Extension}";  //[random name] /3456sd23rf.png(generate GUID To be uninq in db) 
 			string ImgPath = Path.Combine($"{RootPath}/Images/Book", ImageName); // الباث كله-----> wwwroot\Images\Book\rt4wfj.png
 			using var stream = System.IO.File.Create(ImgPath);//حولي الباث ده لبيتس علشان اعرف استقبل فيه صوره 
-			await model.FormImg.CopyToAsync(stream);// (هنا بكلم الاوبريتنج سيستم يبقا يفضل Async)// إستقبل فيه الصورة
+			await model.Img.CopyToAsync(stream);// (هنا بكلم الاوبريتنج سيستم يبقا يفضل Async)// إستقبل فيه الصورة
 			model.ImgUrl = ImageName;// لازم تاخد قيمه في الداتابيز فهنديها اسمها 
 
 		}
